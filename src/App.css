@@ -1,0 +1,104 @@
+/* variables */
+
+:root {
+  --main-color: #404258;
+  --second-color: #474E68;
+  --third-color: #50577A;
+  --forth-color: #6B728E;
+  --text-color: #eef2ff;
+  ;
+}
+
+
+
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif, source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background: var(--main-color);
+}
+
+
+
+.horizental-scroll{
+  display: flex;
+  flex-direction:row;
+  justify-content:center;  
+  overflow-x: scroll;
+  overflow-y: hidden;
+  white-space: nowrap;
+    }
+   
+
+.MovieBox{
+  background: var(--second-color);
+  
+  padding: 1.5rem 1.5rem 1.5rem 0rem;
+  border-bottom: solid 0.1rem var(--forth-color);
+  border-top: solid 0.1rem var(--forth-color);
+}
+.card{
+  background-color: var(--main-color);
+
+}
+.card img{
+ border-radius: 1%;
+  width: 100%;
+    height: 100%;
+    object-fit: cover;
+
+}
+.list-group-item{
+  background-color: var(--main-color);
+ 
+}
+.list-group-item h6 {
+  color: var(--text-color);
+}
+.MovieBox p {
+  visibility: hidden;
+  color: red;
+  transform: translateY(-150%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+}
+p:hover {
+  visibility:visible;
+  color: rgb(50, 215, 28)(111, 255, 0);
+  transform: translateY(-150%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+}
+.home-title{
+  width: 170px;
+  height: 50px;
+  background-color:var(--second-color);
+  color: var(--text-color);
+  margin: 10px;
+  padding: -15px;
+  border-radius: 5%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* ============================== */
+/* Navbar*/
+.nav {
+  background-color: var(--second-color) !important;
+  color: var(--text-color) !important;
+}
+.nav a{
+  background-color: var(--second-color) !important;
+  color: var(--text-color) !important;
+}
+/* ================================= */
+
