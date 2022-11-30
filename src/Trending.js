@@ -7,9 +7,10 @@ import { Link } from "react-router-dom";
 
 
 const API_URL="https://api.themoviedb.org/3/movie/popular?api_key=d9b8b56396c1b221d30a114aeb44d454"
-//const API_URL="https://api.themoviedb.org/4/list/9258?page=1&api_key=d9b8b56396c1b221d30a114aeb44d454"  
+
 const Trending = () => {
   const [movie, setmovie] = useState('');
+  //const [pageCount, setpageCount] = useState(0)
 
   useEffect(() => {
     fetch(API_URL)
@@ -17,6 +18,8 @@ const Trending = () => {
     .then(data=>{
       console.log(data);
       setmovie(data.results);
+    
+      
     })            
   },[])
   

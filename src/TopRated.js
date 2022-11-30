@@ -19,7 +19,7 @@ const TopRated = () => {
   }, []);
   return (
     <div>
-    <div className="home-title"><h3><Link to= "/...">Top Rated</Link></h3> </div>
+    <div className="home-title"><h3><Link to= "/TopRatedPage">Top Rated</Link></h3> </div>
     <Container fluid className="horizental-scroll">
       
       {Array.from(Rating).map((movieReq) => (

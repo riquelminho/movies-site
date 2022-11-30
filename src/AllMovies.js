@@ -3,11 +3,11 @@ import React, { useEffect, useState } from "react";
 import MovieBox from "./MovieBox";
 
 
-const API_URL =
-  "https://api.themoviedb.org/3/movie/popular?api_key=d9b8b56396c1b221d30a114aeb44d454";
+
+const API_URL="https://api.themoviedb.org/3/movie/popular?api_key=d9b8b56396c1b221d30a114aeb44d454"
 
 
-const TrendingPage = () => {
+const AllMovies = () => {
   const [movie, setmovie] = useState("");
 
   useEffect(() => {
@@ -26,6 +26,7 @@ const TrendingPage = () => {
         <MovieBox key={movieReq.id} {...movieReq} />
       ))}
     </div>
-  );
-};
-export default TrendingPage;
+); 
+}
+
+export default AllMovies;

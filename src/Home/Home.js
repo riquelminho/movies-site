@@ -1,9 +1,9 @@
-import Navbar from "../Navbar";
 import Trending from "../Trending";
 import TvShow from "../TvShow";
 import Upcoming from "../Upcoming";
 import TopRated from "../TopRated";
-import WatchingPage from "../WatchingPage";
+import Search from "../Search";
+import Footer from "../Footer";
 
 
 
@@ -12,15 +12,13 @@ import WatchingPage from "../WatchingPage";
 const Home = () => {
   return (
     <main>
-  
-      
-        <Navbar />
-        <Trending />
-        <TvShow />
-        <Upcoming />
-        <TopRated />
-        <WatchingPage />
+      <Search />
 
+      <Trending />
+      <TvShow />
+      <Upcoming />
+      <TopRated />
+      <Footer />
     </main>
   );
 };

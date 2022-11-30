@@ -19,7 +19,7 @@ const TvShow = () => {
   },[])
   return (
     <div>
-    <div className="home-title"><h3><Link to= "/...">TV Show</Link></h3> </div>
+    <div className="home-title"><h3><Link to= "/TvShowPage">TV Show</Link></h3> </div>
     <Container fluid className="horizental-scroll">
       
       {Array.from(Tvshow).map((movieReq)=>
