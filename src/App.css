@@ -28,27 +28,32 @@ body {
   overflow-x: scroll;
   overflow-y: hidden;
   white-space: nowrap;
-  border-top: solid var(--fourth-color)  0.12em;
+  border-top: solid var(--fourth-color) 0.12em;
 
 }
 
 
 .MovieBox {
-  background: var(--second-color);
+  background:  var(--second-color);
   padding: 1.5rem 1.5rem 1.5rem 0rem;
   border-bottom: solid 0.10rem var(--forth-color);
   border-top: solid 0.1rem var(--forth-color);
+ 
+
+
 }
 
 .card {
   background-color: var(--main-color);
   overflow: hidden;
-  position: relative;
+  margin-left: 1.6em;
+
+ 
+
 }
 
 .card:hover {
   border-color: rgb(0, 153, 255);
-
 }
 
 .card img {
@@ -56,7 +61,6 @@ body {
   width: 100%;
   height: 100%;
   object-fit: cover;
-
 }
 
 .list-group-item {
@@ -84,23 +88,31 @@ body {
   color: red;
   margin: 10px;
   padding: -15px;
-  border-radius: 3%;
+  border-radius: 1em;
   display: flex;
   justify-content: center;
   align-items: center;
- 
+
 }
+
 .home-title h3 {
 
-  text-decoration: none ;
-  color: red !important;
-
+  text-decoration: none;
+  color: var(--text-color) !important;
 }
+
+.home-title h3:hover {
+
+  text-decoration: none;
+  color: rgb(0, 153, 255) !important;
+}
+
 .home-title:hover {
 
   background-color: var(--main-color);
   border: 0.12em solid var(--fourth-color);
-  border-radius: 3%;
+  border-radius: 1em;
+
 }
 
 /*==============================*/
@@ -132,7 +144,9 @@ ul {
 
 /* ============================== */
 /* Navbar*/
-.nav {
+.nav-links {
+  display: flex;
+  justify-content: center;
   background-color: var(--second-color) !important;
   color: var(--text-color) !important;
 }
@@ -158,14 +172,99 @@ ul {
 }
 
 ::-webkit-scrollbar-thumb {
-  background: var(--second-color);
+  background: var(--main-color);
   border: 0.12em solid var(--fourth-color);
   border-radius: 100vw;
 
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: var(--main-color);
+  /* background: var(--main-color); */
+  background: rgb(0, 153, 255);
 }
 
-/************************/
+/******* Footer ********/
+.footer {
+  background-color: #2a2b39;
+  padding: 2.5em;
+  border-top: solid 0.15em var(--second-color);
+}
+
+.social-bar {
+  height: 1.2em;
+  width: 50em;
+  background-color: #2a2b39;
+  padding: 2em;
+  transform: translateY(2.2em);
+  border-radius: 10em;
+  border: solid 0.15em var(--second-color);
+}
+
+
+.social-icons ul {
+  display: flex;
+  transform: translateY(-2.6em);
+}
+
+.social-icons a {
+  font-size: 3em;
+  color: var(--fourth-color);
+  margin-left: 1.5em;
+}
+
+.list-menu {
+  color: var(--fourth-color);
+}
+
+.list-contact {
+  color: var(--fourth-color);
+}
+
+.newsletter {
+  color: var(--fourth-color);
+}
+
+.newsletter Button {
+  color: white;
+  background-color: var(--main-color);
+  border-color: var(--fourth-color);
+}
+
+.newsletter Button:hover {
+  color: #2a2b39;
+  background-color: var(--third-color);
+  border-color: var(--fourth-color);
+}
+
+/************ navbar-search ***************/
+.navbar-search {
+  background-color: #2a2b39;
+  color: red;
+}
+
+.navbar-search Button {
+  background-color: var(--second-color);
+  color: white;
+  border-color: var(--fourth-color);
+}
+
+.navbar-search Button:hover {
+  background-color: var(--main-color);
+  color: rgb(0, 153, 255);
+  border-color: rgb(0, 153, 255);
+}
+
+.me-2:focus {
+  width: 20em;
+}
+
+.logo {
+  font-size: 2.5em;
+  color: var(--fourth-color);
+}
+
+/*=========  trendingPage  =========*/
+.bg-Pages {
+  background-color: var(--second-color);
+}
+

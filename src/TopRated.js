@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import MovieBox from "./MovieBox";
-import { Container } from "react-bootstrap";
+import { Container, Nav } from "react-bootstrap";
 import { Link } from "react-router-dom";
 
 const API_URL =
@@ -19,7 +19,7 @@ const TopRated = () => {
   }, []);
   return (
     <div>
-    <div className="home-title"><h3><Link to= "/TopRatedPage">Top Rated</Link></h3> </div>
+    <div className="home-title"><h3><Nav.Link href= "/TopRatedPage">Top Rated</Nav.Link></h3> </div>
     <Container fluid className="horizental-scroll">
       
       {Array.from(Rating).map((movieReq) => (

@@ -15,11 +15,9 @@ import UpcomingPage from "./UpcomingPage";
 
 const router = createBrowserRouter([
   
+
   {
-    path: "/",
-  },
-  {
-    path: "/Home", element: <Home />,
+    path: "/", element: <Home/>,
   },
   {
     path: "/Search", element: <Search />,

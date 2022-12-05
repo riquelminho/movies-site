@@ -3,6 +3,7 @@ import {Button, Container, Form, Nav, Navbar} from "react-bootstrap";
 import React,{useState} from 'react';
 import MovieBox from "./MovieBox";
 import {  useNavigate } from "react-router-dom";
+import { MdMovieFilter} from "react-icons/md";
 
 const Search = () => {
   const navigate = useNavigate();
@@ -30,10 +31,10 @@ const Search = () => {
   }
   return (
     <>
-      <Navbar bg="light" expand="lg">
+    <div className="navbar-search">
+      <Navbar  expand="lg">
         <Container fluid>
-          <Navbar.Brand href="#">Navbar scroll</Navbar.Brand>
-
+          <Navbar.Brand >  <Nav.Link href="/"> <MdMovieFilter className="logo"/> </Nav.Link> </Navbar.Brand>
           <Form className="d-flex" onSubmit={searchMovie} autoComplete="off">
             <Form.Control
               type="search"
@@ -46,6 +47,7 @@ const Search = () => {
           </Form>
         </Container>
       </Navbar>
+      </div>
     
      
         <div className="container">
@@ -54,7 +56,8 @@ const Search = () => {
           <MovieBox key={movieReq.id} {...movieReq}/>)}
             </div>
         </div>
-  
+
+        <div className="nav-links">
         <Nav>
         <Nav.Item>
           <Nav.Link href="/home">HOME</Nav.Link>
@@ -69,8 +72,7 @@ const Search = () => {
           <Nav.Link href="/ContactUs">CONTACT US</Nav.Link>
         </Nav.Item>
       </Nav>
-    
-
+      </div>
     </>
   );
 };

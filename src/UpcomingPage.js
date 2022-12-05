@@ -1,6 +1,8 @@
 
 import React, { useEffect, useState } from "react";
 import MovieBox from "./MovieBox";
+import { Container, Row ,Col, } from "react-bootstrap";
+
 
 
 const API_URL =
@@ -20,12 +22,15 @@ const UpcomingPage = () => {
   }, []);
 
   return (
-    <div>
-      {" "}
-      {Array.from(movie).map((movieReq) => (
-        <MovieBox key={movieReq.id} {...movieReq} />
-      ))}
-    </div>
+    <Container fluid="md" className="bg-Pages">
+<Row>
+  {Array.from(movie).map((movieReq) =>
+     <Col>
+         <MovieBox key={movieReq.id} {...movieReq} />
+      </Col>)
+      }  
+</Row>
+</Container>
   );
 };
 export default UpcomingPage;

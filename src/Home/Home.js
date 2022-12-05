@@ -13,7 +13,6 @@ const Home = () => {
   return (
     <main>
       <Search />
-
       <Trending />
       <TvShow />
       <Upcoming />

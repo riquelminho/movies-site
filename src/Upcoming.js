@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import MovieBox from "./MovieBox";
-import { Container } from "react-bootstrap";
+import { Container, Nav } from "react-bootstrap";
 import { Link } from "react-router-dom";
 
 const API_URL =
@@ -20,7 +20,7 @@ const Upcoming = () => {
   return (
     <div>
     
-    <div className="home-title"><h3><Link to= "/UpcomingPage">Upcoming</Link></h3> </div>
+    <div className="home-title"><h3><Nav.Link href= "/UpcomingPage">Upcoming</Nav.Link></h3> </div>
     <Container fluid className="horizental-scroll">
       {Array.from(Coming).map((movieReq) => (
         <MovieBox key={movieReq.id} {...movieReq} />

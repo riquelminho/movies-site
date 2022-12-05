@@ -1,5 +1,4 @@
 
-
 import Trending from "./Trending";
 import TvShow from "./TvShow";
 import Upcoming from "./Upcoming";
@@ -13,7 +12,7 @@ import Home from "./Home/Home";
 function App() {
   return (
     <main>
- 
+
     </main>
   );
 }
