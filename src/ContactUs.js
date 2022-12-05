@@ -1,10 +1,10 @@
-import { Button, Form } from "react-bootstrap";
+import { Button, Container, Form } from "react-bootstrap";
 
 const ContactUs = () => {
   return (
-    <>
-    Quick Contact
-Contact us today, and get reply with in 24 hours!
+    <Container className="contact-page">
+   <h4 >Contact us today, and get reply with in 24 hours!</h4>
+
       <Form>
         <Form.Group className="mb-3" controlId="exampleForm.ControlInput1">
           <Form.Label>Name</Form.Label>
@@ -23,13 +23,13 @@ Contact us today, and get reply with in 24 hours!
           />
         </Form.Group>
       </Form>
-      <div className="d-grid gap-2">
+      <div className="d-grid gap-1">
         <Button variant="primary" size="lg">
-          Block level button
+          Submit
           </Button>
        
       </div>
-    </>
+    </Container>
   );
 };
 

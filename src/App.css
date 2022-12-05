@@ -34,11 +34,11 @@ body {
 
 
 .MovieBox {
-  background:  var(--second-color);
+  background: var(--second-color);
   padding: 1.5rem 1.5rem 1.5rem 0rem;
   border-bottom: solid 0.10rem var(--forth-color);
   border-top: solid 0.1rem var(--forth-color);
- 
+
 
 
 }
@@ -48,7 +48,7 @@ body {
   overflow: hidden;
   margin-left: 1.6em;
 
- 
+
 
 }
 
@@ -63,23 +63,6 @@ body {
   object-fit: cover;
 }
 
-.list-group-item {
-  background-color: var(--main-color);
-
-}
-
-.list-group-item h6 {
-  color: var(--text-color);
-}
-
-.MovieBox p {
-  visibility: visible;
-  color: red;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-
-}
 
 .home-title {
   width: 170px;
@@ -149,11 +132,20 @@ ul {
   justify-content: center;
   background-color: var(--second-color) !important;
   color: var(--text-color) !important;
+  box-shadow: -1px 3px 9px 1px rgba(56,58,66,0.75);
+-webkit-box-shadow: -1px 3px 9px 1px rgba(56,58,66,0.75);
+-moz-box-shadow: -1px 3px 9px 1px rgba(56,58,66,0.75);
+
 }
 
 .nav a {
   background-color: var(--second-color) !important;
   color: var(--text-color) !important;
+}
+
+.nav a:hover {
+  background-color: var(--second-color) !important;
+  color: rgb(0, 153, 255) !important;
 }
 
 /* ================================= */
@@ -240,6 +232,12 @@ ul {
 .navbar-search {
   background-color: #2a2b39;
   color: red;
+
+}
+.sticky{
+  position: sticky;
+  top: 0px;
+  z-index: 100;
 }
 
 .navbar-search Button {
@@ -268,3 +266,60 @@ ul {
   background-color: var(--second-color);
 }
 
+/******** contact-page *******/
+.contact-page {
+  background-color: var(--second-color);
+  color: var(--text-color);
+  width: 70%;
+  height: 80vh;
+  margin-top: 5em;
+  margin-bottom: 5em;
+  padding: 4em;
+  border-radius: 1em;
+}
+
+.contact-page Button {
+  background-color: #2a2b39;
+  border-color: var(--fourth-color);
+  justify-content: center;
+
+}
+
+.contact-page h4 {
+
+  border-color: var(--fourth-color);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+}
+/******** watching-Page *************/
+.watching-Page{
+
+ display: flex;
+ justify-content: space-between;
+ align-items: center;
+ margin-top: 1em;
+}
+.infocard{
+margin-top: 1em;
+
+}
+.infocard p{
+color: var(--text-color);
+}
+.infocard span{
+  color: #2a2b39;
+  
+}
+.list-group-item {
+background-color: var(--second-color);
+}
+.icons-card{
+ display: flex;
+ justify-content: center;
+ align-items: center;
+ color: var(--text-color);
+ font-size: 1.3em;
+ word-spacing:1em;
+}

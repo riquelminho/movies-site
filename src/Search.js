@@ -30,7 +30,10 @@ const Search = () => {
     setQuery(e.target.value);
   }
   return (
+
+    
     <>
+    <div className="sticky">
     <div className="navbar-search">
       <Navbar  expand="lg">
         <Container fluid>
@@ -60,7 +63,7 @@ const Search = () => {
         <div className="nav-links">
         <Nav>
         <Nav.Item>
-          <Nav.Link href="/home">HOME</Nav.Link>
+          <Nav.Link href="/">HOME</Nav.Link>
         </Nav.Item>
         <Nav.Item>
           <Nav.Link href="/AllMovies">MOVIES</Nav.Link>
@@ -72,6 +75,7 @@ const Search = () => {
           <Nav.Link href="/ContactUs">CONTACT US</Nav.Link>
         </Nav.Item>
       </Nav>
+      </div>
       </div>
     </>
   );
