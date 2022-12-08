@@ -1,22 +1,20 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
-import App from "./App";
+import "./index.css";
 import {createBrowserRouter,RouterProvider} from "react-router-dom";
-import Home from "./Home/Home";
-import TrendingPage from "./TrendingPage";
-import ContactUs from "./ContactUs";
-
-import Search from "./Search";
-import WatchingPage from "./WatchingPage";
-import AllMovies from "./AllMovies";
-import TvShowPage from "./TvShowPage";
-import TopRatedPage from "./TopRatedPage";
-import UpcomingPage from "./UpcomingPage";
-import WatchingTvPage from "./WatchingTvPage ";
+import Home from "./Pages/Home";
+import ContactUs from "./Pages/ContactUs";
+import TrendingPage from "./Pages/TrendingPage";
+import WatchingPage from "./Pages/WatchingPage";
+import AllMovies from "./Pages/AllMovies";
+import TvShowPage from "./Pages/TvShowPage";
+import TopRatedPage from "./Pages/TopRatedPage";
+import UpcomingPage from "./Pages/UpcomingPage";
+import WatchingTvPage from "./Pages/WatchingTvPage ";
+import Search from "./Components/Search";
 
 const router = createBrowserRouter([
   
-
   {
     path: "/", element: <Home/>,
   },
@@ -54,7 +52,6 @@ const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   <React.StrictMode>
   <RouterProvider router={router} /> 
-  
   </React.StrictMode>
 );
 

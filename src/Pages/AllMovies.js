@@ -1,7 +1,8 @@
 
 import React, { useEffect, useState } from "react";
-import MovieBox from "./MovieBox";
+
 import { Container, Row ,Col, } from "react-bootstrap";
+import MovieBox from "../Components/MovieBox";
 
 
 

@@ -1,16 +1,15 @@
 import React from "react";
-
 import { Link } from "react-router-dom";
 
 // ===================
 
 const API_IMG = "https://image.tmdb.org/t/p/w500/";
 
-const MovieBox = ({ id,title, poster_path, vote_average, name, release_date,first_air_date }) => {
+const TvBox = ({ id,title, poster_path, vote_average, name, release_date,first_air_date }) => {
   return (
     <>
       <div className="container  MovieBox">
-      <Link to={`/WatchingPage/${id}`}> 
+      <Link to={`/WatchingTvPage/${id}`}> 
         <div className="row ">
           <div className="col-2">
             <div className="card" style={{ width: "13rem" }}>
@@ -37,4 +36,4 @@ const MovieBox = ({ id,title, poster_path, vote_average, name, release_date,firs
   );
 };
 
-export default MovieBox;
+export default TvBox;

@@ -1,15 +1,15 @@
 
 import React, { useEffect, useState } from "react";
-import MovieBox from "./MovieBox";
 import { Container, Row ,Col, } from "react-bootstrap";
+import MovieBox from "../Components/MovieBox";
 
 
 
 const API_URL =
-  "https://api.themoviedb.org/3/movie/upcoming?api_key=d9b8b56396c1b221d30a114aeb44d454";
+  "https://api.themoviedb.org/3/movie/popular?api_key=d9b8b56396c1b221d30a114aeb44d454";
 
 
-const UpcomingPage = () => {
+const TrendingPage = () => {
   const [movie, setmovie] = useState("");
 
   useEffect(() => {
@@ -22,7 +22,8 @@ const UpcomingPage = () => {
   }, []);
 
   return (
-    <Container fluid="md" className="bg-Pages">
+
+ <Container fluid="md" className="bg-Pages">
 <Row>
   {Array.from(movie).map((movieReq) =>
      <Col>
@@ -31,6 +32,8 @@ const UpcomingPage = () => {
       }  
 </Row>
 </Container>
+
+
   );
 };
-export default UpcomingPage;
+export default TrendingPage;

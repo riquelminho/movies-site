@@ -1,5 +1,4 @@
 import React, { useEffect, useState } from "react";
-import MovieBox from "./MovieBox";
 import { Container, Nav} from 'react-bootstrap';
 import TvBox from "./TvBox";
 

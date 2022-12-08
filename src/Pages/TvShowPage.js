@@ -1,8 +1,9 @@
 
 import React, { useEffect, useState } from "react";
 import { Col, Container, Row } from "react-bootstrap";
+import TvBox from "../Components/TvBox";
 
-import TvBox from "./TvBox";
+
 
 
 const API_URL =

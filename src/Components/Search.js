@@ -1,10 +1,9 @@
 import {
-  Button,Col,Container,Form,Nav,Navbar,Pagination,Row,} from "react-bootstrap";
+  Button,Col,Container,Form,Nav,Navbar,Row,} from "react-bootstrap";
 import React, { useState } from "react";
 import MovieBox from "./MovieBox";
 import { useNavigate } from "react-router-dom";
 import { MdMovieFilter } from "react-icons/md";
-import axios from "axios";
 import Pages from "./Pagination";
 
 const Search = () => {
@@ -14,8 +13,6 @@ const Search = () => {
  
 
   const searchMovie = async ( page) => {
-  
-  
     try {
       const url = `https://api.themoviedb.org/3/search/movie?api_key=d9b8b56396c1b221d30a114aeb44d454&query=${query}&page=${page}`;
       const res = await fetch(url);

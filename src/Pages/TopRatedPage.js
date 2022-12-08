@@ -1,8 +1,8 @@
 
 import React, { useEffect, useState } from "react";
-import MovieBox from "./MovieBox";
+import MovieBox from "../Components/MovieBox";
 import { Container, Row ,Col,  } from "react-bootstrap";
-import Pages from "./Pagination";
+import Pages from "../Components/Pagination";
 
 
   const TopRatedPage = ({ getPage, pageCount }) => {
@@ -33,5 +33,3 @@ import Pages from "./Pagination";
   );
 };
 export default TopRatedPage;
-//<Pages getPage={getPage} pageCount={pageCount}/>
-//const TopRatedPage = ({ getPage, pageCount }) => {

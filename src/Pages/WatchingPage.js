@@ -7,8 +7,9 @@ import Col from "react-bootstrap/Col";
 import Button from "react-bootstrap/Button";
 import { useParams } from "react-router-dom";
 import axios from "axios";
-import Search from "./Search";
+
 import { FaThumbsUp,FaThumbsDown } from 'react-icons/fa';
+import Search from "../Components/Search";
 
 const WatchingPage = () => {
   const params = useParams();

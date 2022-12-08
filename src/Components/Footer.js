@@ -1,9 +1,8 @@
 
 import { Button, Col, Container, Form, Nav, Row } from 'react-bootstrap';
 import { MdAlternateEmail} from "react-icons/md";
-import { FaFacebook, FaInstagram,FaTiktok, FaYoutube, FaTwitter,FaLocationArrow,
-         FaPhoneAlt
- } from 'react-icons/fa';
+import { FaFacebook, FaInstagram,FaTiktok, FaYoutube,
+          FaTwitter,FaLocationArrow, FaPhoneAlt} from 'react-icons/fa';
 
 
 
@@ -12,9 +11,7 @@ const Footer = () => {
     <>
     <Container className="social-bar">
     <Row>
-      {/* <Col className="social-icons"><span style={{ fontSize: 24,  textAlign: 'center'}}>Follwos us:</span> 
-      <FaFacebook/> <FaInstagram/> <FaTiktok/><FaYoutube/>
-       </Col>*/}
+    
       <Col className="social-icons" >
       <ul>
       <li> <a href="https://www.facebook.com"><FaFacebook/></a></li>
