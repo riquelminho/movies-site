@@ -1,7 +1,8 @@
 
 import React, { useEffect, useState } from "react";
 import { Col, Container, Row } from "react-bootstrap";
-import MovieBox from "./MovieBox";
+
+import TvBox from "./TvBox";
 
 
 const API_URL =
@@ -25,7 +26,7 @@ const TvShowPage = () => {
     <Row>
       {Array.from(movie).map((movieReq) =>
          <Col>
-             <MovieBox key={movieReq.id} {...movieReq} />
+             <TvBox key={movieReq.id} {...movieReq} />
           </Col>)
           }  
     </Row>

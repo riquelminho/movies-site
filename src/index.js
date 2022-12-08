@@ -12,6 +12,7 @@ import AllMovies from "./AllMovies";
 import TvShowPage from "./TvShowPage";
 import TopRatedPage from "./TopRatedPage";
 import UpcomingPage from "./UpcomingPage";
+import WatchingTvPage from "./WatchingTvPage ";
 
 const router = createBrowserRouter([
   
@@ -42,6 +43,9 @@ const router = createBrowserRouter([
   },
   {
     path: "/WatchingPage/:id", element: <WatchingPage />,
+  },
+  {
+    path: "/WatchingTvPage/:id", element: <WatchingTvPage />,
   },
 ]);
 
