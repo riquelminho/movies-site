@@ -4,22 +4,21 @@ import React, { useState } from "react";
 import MovieBox from "./MovieBox";
 import { useNavigate } from "react-router-dom";
 import { MdMovieFilter } from "react-icons/md";
-import Pages from "./Pagination";
 
-const Search = () => {
+
+ const Search = () => {
   const navigate = useNavigate();
   const [movies, setMovies] = useState([]);
   const [query, setQuery] = useState("");
  
 
-  const searchMovie = async ( page) => {
+  const searchMovie = async (e ) => {
+    e.preventDefault();
     try {
-      const url = `https://api.themoviedb.org/3/search/movie?api_key=d9b8b56396c1b221d30a114aeb44d454&query=${query}&page=${page}`;
+      const url = `https://api.themoviedb.org/3/search/movie?api_key=d9b8b56396c1b221d30a114aeb44d454&query=${query}`;
       const res = await fetch(url);
-      const data = await res.json();
-      console.log(data.selected + 1)
-      setMovies(data.results);
-  
+      const data = await res.json();  
+      setMovies(data.results);  
     } catch (e) {
       console.log(e);
     }
@@ -38,11 +37,9 @@ const Search = () => {
           <Navbar expand="lg">
             <Container fluid>
               <Navbar.Brand>
-                {" "}
-                <Nav.Link href="/">
-                  {" "}
-                  <MdMovieFilter className="logo" />{" "}
-                </Nav.Link>{" "}
+                <Nav.Link href="/">          
+                  <MdMovieFilter className="logo" />
+                </Nav.Link>
               </Navbar.Brand>
               <Form
                 className="d-flex"
@@ -87,6 +84,8 @@ const Search = () => {
           </Nav>
         </div>
       </div>
+
+
       <Container fluid="md" className="bg-Pages">
         <Row>
           {movies.map((movieReq) => (
@@ -96,7 +95,7 @@ const Search = () => {
           ))}
         
         </Row>
-        {movies.length >= 1 ? (<Pages />) : null}
+      
       </Container>
     </>
   );
