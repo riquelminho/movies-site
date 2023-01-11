@@ -2,12 +2,11 @@
 import React, { useEffect, useState } from "react";
 import MovieBox from "../Components/MovieBox";
 import { Container, Row ,Col,  } from "react-bootstrap";
-import Pages from "../Components/Pagination";
 import Search from "../Components/Search";
 import Footer from "../Components/Footer";
 
 
-  const TopRatedPage = ({ getPage, pageCount }) => {
+  const TopRatedPage = () => {
   const API_URL =
   `https://api.themoviedb.org/3/movie/popular?api_key=d9b8b56396c1b221d30a114aeb44d454`;
 

@@ -1,9 +1,9 @@
 
-import { Button, Col, Container, Form, Nav, Row } from 'react-bootstrap';
+import { Button, Col, Container, Form, Row } from 'react-bootstrap';
 import { MdAlternateEmail} from "react-icons/md";
 import { FaFacebook, FaInstagram,FaTiktok, FaYoutube,
           FaTwitter,FaLocationArrow, FaPhoneAlt} from 'react-icons/fa';
-import { Link } from 'react-router-dom';
+
 
 
 
