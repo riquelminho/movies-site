@@ -1,0 +1,169 @@
+
+// variables 
+$main-color: #404258;
+$second-color: #474E68;
+$third-color: #50577A;
+$fourth-color: #6B728E;
+$text-color: #eef2ff;
+$hover-color:rgb(0, 153, 255);
+//===========================
+
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif, source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background: $main-color;
+}
+/*============ scrollbars ====================*/
+::-webkit-scrollbar {
+  width: 1em;
+  height: 1em;
+}
+
+::-webkit-scrollbar-track {
+  background: $third-color;
+  border-radius: 100vw;
+  margin-block:0.1em;
+}
+
+::-webkit-scrollbar-thumb {
+  background: $main-color;
+  border: 0.12em solid $fourth-color;
+  border-radius: 100vw;
+  &:hover {
+    background: $hover-color;
+  }
+}
+/*============ Navbar search form  ====================*/
+.sticky {
+  position: sticky;
+  top: 0px;
+  z-index: 100;
+}
+.navbar-search {
+  background-color: #2a2b39;
+  Button {
+    background-color: $second-color;
+    color: white;
+    border-color: $fourth-color;
+    &:hover {
+      background-color: $main-color;
+      color: rgb(0, 153, 255);
+      border-color: rgb(0, 153, 255);
+    }
+  }
+  .me-2:focus {
+    width: 20em;
+  }
+  .logo {
+    font-size: 2.5em;
+    color: $fourth-color;
+  }
+}
+/*============ Navbar links ====================*/
+.nav-links {
+  display: flex;
+  justify-content: center;
+  background-color: $second-color;
+  color: $text-color;
+  box-shadow: -1px 3px 9px 1px rgba(56, 58, 66, 0.75);
+  -webkit-box-shadow: -1px 3px 9px 1px rgba(56, 58, 66, 0.75);
+  -moz-box-shadow: -1px 3px 9px 1px rgba(56, 58, 66, 0.75);
+
+   a {
+    background-color: $second-color;
+    color: $text-color;
+    text-decoration: none;
+    margin: 1rem;
+    &:hover {
+      color: $hover-color;
+      font-weight: bold;
+    }
+  }
+}
+/*============ horizental-scroll container  ====================*/
+.horizental-scroll {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  overflow-x: scroll;
+  overflow-y: hidden;
+  white-space: nowrap;
+  border-top: solid $fourth-color 0.12em;
+  box-shadow: -1px 3px 9px 1px rgba(56, 58, 66, 0.75);
+  -webkit-box-shadow: -1px 3px 9px 1px rgba(56, 58, 66, 0.75);
+  -moz-box-shadow: -1px 3px 9px 1px rgba(56, 58, 66, 0.75);
+}
+/*============ MovieBox  ====================*/
+.MovieBox {
+  background: $second-color;
+  padding: 1.5rem 1.5rem 1.5rem 0rem;
+  border-bottom: solid 0.10rem $fourth-color;
+  border-top: solid 0.1rem $fourth-color;
+  .card {
+    background-color: $main-color;
+    overflow: hidden;
+    margin-left: 1.6em;
+    &:hover {
+      border-color: $hover-color;
+    }
+    img {
+      border-radius: 1%;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+}
+
+
+
+/*============ Home ====================*/
+.home-title {
+  width: 170px;
+  height: 50px;
+  background-color: $second-color;
+  margin: 10px;
+  padding: -15px;
+  border-radius: 1em;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  &:hover {
+    text-decoration: none;
+    color: $hover-color ;
+  }
+}
+.home-title a {
+  text-decoration: none;
+  color: $text-color;
+  text-decoration: none;
+  &:hover {
+    background-color: $main-color;
+    border: 0.12em solid $fourth-color;
+    border-radius: 1em;
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

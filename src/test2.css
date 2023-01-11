@@ -1,0 +1,348 @@
+/* variables */
+
+:root {
+  --main-color: #404258;
+  --second-color: #474E68;
+  --third-color: #50577A;
+  --fourth-color: #6B728E;
+  --text-color: #eef2ff;
+
+}
+/*******************************/
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif, source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background: var(--main-color);
+}
+
+.horizental-scroll {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  overflow-x: scroll;
+  overflow-y: hidden;
+  white-space: nowrap;
+  border-top: solid var(--fourth-color) 0.12em;
+  box-shadow: -1px 3px 9px 1px rgba(56, 58, 66, 0.75);
+  -webkit-box-shadow: -1px 3px 9px 1px rgba(56, 58, 66, 0.75);
+  -moz-box-shadow: -1px 3px 9px 1px rgba(56, 58, 66, 0.75);
+}
+
+
+.MovieBox {
+  background: var(--second-color);
+  padding: 1.5rem 1.5rem 1.5rem 0rem;
+  border-bottom: solid 0.10rem var(--forth-color);
+  border-top: solid 0.1rem var(--forth-color);
+}
+
+.card {
+  background-color: var(--main-color);
+  overflow: hidden;
+  margin-left: 1.6em;
+
+}
+
+.card:hover {
+  border-color: rgb(0, 153, 255);
+}
+
+.card img {
+  border-radius: 1%;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+
+.home-title {
+  width: 170px;
+  height: 50px;
+  background-color: var(--second-color);
+  margin: 10px;
+  padding: -15px;
+  border-radius: 1em;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+}
+
+.home-title a {
+
+  text-decoration: none;
+  color: var(--text-color);
+  text-decoration: none;
+}
+
+.home-title a:hover {
+
+  text-decoration: none;
+  color: rgb(0, 153, 255)  ;
+}
+
+.home-title:hover {
+
+  background-color: var(--main-color);
+  border: 0.12em solid var(--fourth-color);
+  border-radius: 1em;
+
+}
+
+/*==============================*/
+.card .overlay-content {
+  width: 100%;
+  height: 100%;
+  background-color: #000000;
+  color: rgb(0, 153, 255);
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  white-space:normal;
+  position: absolute;
+  z-index: 1;
+  transition: 0.6s;
+  top: 0%;
+  left: 100%;
+  opacity: 0.9;
+
+}
+
+.card:hover .overlay-content {
+  /* left: 0; */
+  transform: translateX(-100%);
+}
+
+ul {
+  list-style-type: none;
+}
+
+/* ============================== */
+/* Navbar*/
+.nav-links {
+  display: flex;
+  justify-content: center;
+  background-color: var(--second-color) !important;
+  color: var(--text-color) !important;
+  box-shadow: -1px 3px 9px 1px rgba(56, 58, 66, 0.75);
+  -webkit-box-shadow: -1px 3px 9px 1px rgba(56, 58, 66, 0.75);
+  -moz-box-shadow: -1px 3px 9px 1px rgba(56, 58, 66, 0.75);
+
+}
+
+.nav a {
+  background-color: var(--second-color) !important;
+  color: var(--text-color) !important;
+  text-decoration: none;
+  margin: 1rem;
+}
+
+.nav a:hover {
+  background-color: var(--second-color) !important;
+  color: rgb(0, 153, 255) !important;
+  font-weight: bold;
+}
+
+/* ================================= */
+/*scrollbars===============*/
+
+
+::-webkit-scrollbar {
+  width: 1em;
+  height: 1em;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--third-color);
+  border-radius: 100vw;
+  margin-block:0.1em;
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--main-color);
+  border: 0.12em solid var(--fourth-color);
+  border-radius: 100vw;
+
+}
+
+::-webkit-scrollbar-thumb:hover {
+  /* background: var(--main-color); */
+  background: rgb(0, 153, 255);
+}
+
+/******* Footer ********/
+.footer {
+
+  background-color: #2a2b39;
+  padding: 3rem 8rem 3rem 8rem;
+  border-top: solid 0.15em var(--second-color);
+}
+
+.social-bar {
+  height:2.5rem;
+  width: 60%;
+  background-color: #2a2b39;
+  transform: translateY(1.2rem);
+  border-radius: 5rem;
+  border: solid 0.1rem var(--second-color);
+  
+
+}
+
+
+.social-icons ul {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transform: translateY(-0.3rem);  
+  margin: 0;
+  padding: 0;
+
+}
+
+
+.social-icons a {
+  font-size: 1.5rem;
+  color: var(--fourth-color);
+  padding: 1rem;
+  
+}
+
+.list-menu {
+  color: var(--fourth-color);
+
+}
+.list-menu a {
+  color: var(--fourth-color);
+  text-decoration: none;
+}
+.list-menu a:hover {
+  color: var(--fourth-color);
+  text-decoration: none;
+  font-weight: bold;
+  color:rgb(0, 153, 255)
+}
+
+.list-contact {
+  color: var(--fourth-color);
+}
+
+.newsletter {
+  color: var(--fourth-color);
+}
+
+.newsletter Button {
+  color: white;
+  background-color: var(--main-color);
+  border-color: var(--fourth-color);
+}
+
+.newsletter Button:hover {
+  color: #2a2b39;
+  background-color: var(--third-color);
+  border-color: var(--fourth-color);
+}
+
+/************ navbar-search ***************/
+.navbar-search {
+  background-color: #2a2b39;
+  color: red;
+
+}
+
+.sticky {
+  position: sticky;
+  top: 0px;
+  z-index: 100;
+}
+
+.navbar-search Button {
+  background-color: var(--second-color);
+  color: white;
+  border-color: var(--fourth-color);
+}
+
+.navbar-search Button:hover {
+  background-color: var(--main-color);
+  color: rgb(0, 153, 255);
+  border-color: rgb(0, 153, 255);
+}
+
+.me-2:focus {
+  width: 20em;
+}
+
+.logo {
+  font-size: 2.5em;
+  color: var(--fourth-color);
+}
+
+
+
+/*=========  trendingPage  =========*/
+.bg-Pages {
+  background-color: var(--second-color);
+}
+
+/******** contact-page *******/
+.contact-page {
+  background-color: var(--second-color);
+  color: var(--text-color);
+  width: 70%;
+  height: 80vh;
+  margin-top: 5em;
+  margin-bottom: 5em;
+  padding: 4em;
+  border-radius: 1em;
+}
+
+.contact-page Button {
+  background-color: #2a2b39;
+  border-color: var(--fourth-color);
+  justify-content: center;
+
+}
+
+.contact-page h4 {
+
+  border-color: var(--fourth-color);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+}
+
+/******** watching-Page *************/
+.watching-Page {
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 1em;
+}
+.infocard p {
+  color: var(--text-color);
+
+}
+
+.infocard span {
+  color: var(--text-color);
+}
+
+.list-group-item {
+  background-color: var(--second-color);
+}
+
+.icons-card {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: var(--text-color);
+  font-size: 1.3em;
+  word-spacing: 1em;
+}
