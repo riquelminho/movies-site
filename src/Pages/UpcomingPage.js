@@ -2,6 +2,8 @@
 import React, { useEffect, useState } from "react";
 import MovieBox from "../Components/MovieBox";
 import { Container, Row ,Col, } from "react-bootstrap";
+import Search from "../Components/Search";
+import Footer from "../Components/Footer";
 
 
 
@@ -22,6 +24,8 @@ const UpcomingPage = () => {
   }, []);
 
   return (
+    <>
+    <Search/>
     <Container fluid="md" className="bg-Pages">
 <Row>
   {Array.from(movie).map((movieReq) =>
@@ -31,6 +35,8 @@ const UpcomingPage = () => {
       }  
 </Row>
 </Container>
+<Footer/>
+    </>
   );
 };
 export default UpcomingPage;

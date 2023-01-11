@@ -1,7 +1,11 @@
 import { Button, Container, Form } from "react-bootstrap";
+import Footer from "../Components/Footer";
+import Search from "../Components/Search";
 
 const ContactUs = () => {
   return (
+    <>
+      <Search/>
     <Container className="contact-page">
    <h4 >Contact us today, and get reply with in 24 hours!</h4>
 
@@ -30,6 +34,8 @@ const ContactUs = () => {
        
       </div>
     </Container>
+    <Footer/>
+    </>
   );
 };
 

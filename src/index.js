@@ -13,6 +13,7 @@ import UpcomingPage from "./Pages/UpcomingPage";
 import WatchingTvPage from "./Pages/WatchingTvPage ";
 import Search from "./Components/Search";
 
+
 const router = createBrowserRouter([
   
   {
@@ -45,6 +46,7 @@ const router = createBrowserRouter([
   {
     path: "/WatchingTvPage/:id", element: <WatchingTvPage />,
   },
+  
 ]);
 
 

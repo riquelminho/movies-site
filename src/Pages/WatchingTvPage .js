@@ -10,6 +10,7 @@ import axios from "axios";
 
 import { FaThumbsUp, FaThumbsDown } from "react-icons/fa";
 import Search from "../Components/Search";
+import Footer from "../Components/Footer";
 
 const WatchingTvPage = () => {
   const params = useParams();
@@ -54,14 +55,14 @@ const WatchingTvPage = () => {
                   {" "}
                   <p>
                     {" "}
-                    <span> Title: &nbsp;</span> {movieInfo.name}{" "}
+                    <span> TITLE: &nbsp;</span> {movieInfo.name}{" "}
                   </p>{" "}
                 </ListGroup.Item>
                 <ListGroup.Item>
                   {" "}
                   <p>
                     {" "}
-                    <span> Overview:&nbsp;</span>
+                    <span> OVERVIEW:&nbsp;</span>
                     {movieInfo.overview}{" "}
                   </p>{" "}
                 </ListGroup.Item>
@@ -70,21 +71,21 @@ const WatchingTvPage = () => {
                   {" "}
                   <p>
                     {" "}
-                    <span> Release date:&nbsp;</span> {movieInfo.first_air_date}
+                    <span> RELEASE DATE:&nbsp;</span> {movieInfo.first_air_date}
                   </p>{" "}
                 </ListGroup.Item>
                 <ListGroup.Item>
                   {" "}
                   <p>
                     {" "}
-                    <span> Rating:</span>&nbsp; {movieInfo.vote_average}{" "}
+                    <span> RATING:</span>&nbsp; {movieInfo.vote_average}{" "}
                   </p>{" "}
                 </ListGroup.Item>
                 <ListGroup.Item>
                   {" "}
                   <p>
                     {" "}
-                    <span> Vote count: </span>&nbsp; {movieInfo.vote_count}
+                    <span> VOTE COUNT: </span>&nbsp; {movieInfo.vote_count}
                   </p>{" "}
                 </ListGroup.Item>
                 <ListGroup.Item className="icons-card">
@@ -97,6 +98,7 @@ const WatchingTvPage = () => {
           </Col>
         </Row>
       </Container>
+      <Footer/>
     </>
   );
 };

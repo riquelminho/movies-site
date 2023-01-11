@@ -1,18 +1,20 @@
 import {
   Button,Col,Container,Form,Nav,Navbar,Row,} from "react-bootstrap";
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import MovieBox from "./MovieBox";
-import { useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { MdMovieFilter } from "react-icons/md";
 
 
- const Search = () => {
+
+ const Search = () => {  
   const navigate = useNavigate();
   const [movies, setMovies] = useState([]);
   const [query, setQuery] = useState("");
  
-
-  const searchMovie = async (e ) => {
+  
+    // make the API call when the component is mounted
+  const searchMovie = async (e) => {
     e.preventDefault();
     try {
       const url = `https://api.themoviedb.org/3/search/movie?api_key=d9b8b56396c1b221d30a114aeb44d454&query=${query}`;
@@ -23,8 +25,9 @@ import { MdMovieFilter } from "react-icons/md";
       console.log(e);
     }
   };
-   
-
+  useEffect(() => {
+  searchMovie();
+}, ); // make the API call whenever the query changes
     const changeHandler = (e) => {
       e.preventDefault();
       setQuery(e.target.value);
@@ -37,7 +40,7 @@ import { MdMovieFilter } from "react-icons/md";
           <Navbar expand="lg">
             <Container fluid>
               <Navbar.Brand>
-                <Nav.Link href="/">          
+                <Nav.Link to="/">          
                   <MdMovieFilter className="logo" />
                 </Nav.Link>
               </Navbar.Brand>
@@ -69,26 +72,18 @@ import { MdMovieFilter } from "react-icons/md";
 
         <div className="nav-links">
           <Nav>
-            <Nav.Item>
-              <Nav.Link href="/">HOME</Nav.Link>
-            </Nav.Item>
-            <Nav.Item>
-              <Nav.Link href="/AllMovies">MOVIES</Nav.Link>
-            </Nav.Item>
-            <Nav.Item>
-              <Nav.Link href="/TvShowPage">TV SHOW</Nav.Link>
-            </Nav.Item>
-            <Nav.Item>
-              <Nav.Link href="/ContactUs">CONTACT US</Nav.Link>
-            </Nav.Item>
+              <Link to="/">HOME</Link>
+              <Link to="/AllMovies">MOVIES</Link>
+              <Link to="/TvShowPage">TV SHOW</Link>
+              <Link to="/ContactUs">CONTACT US</Link>
           </Nav>
         </div>
       </div>
 
 
-      <Container fluid="md" className="bg-Pages">
+      <Container  className="bg-Pages">
         <Row>
-          {movies.map((movieReq) => (
+          {movies && movies.map((movieReq) => (
             <Col>
               <MovieBox key={movieReq.id} {...movieReq} />
             </Col>
@@ -97,6 +92,7 @@ import { MdMovieFilter } from "react-icons/md";
         </Row>
       
       </Container>
+    
     </>
   );
 };

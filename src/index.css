@@ -6,7 +6,7 @@
   --third-color: #50577A;
   --fourth-color: #6B728E;
   --text-color: #eef2ff;
-  ;
+
 }
 
 body {
@@ -29,6 +29,10 @@ body {
   overflow-y: hidden;
   white-space: nowrap;
   border-top: solid var(--fourth-color) 0.12em;
+  box-shadow: -1px 3px 9px 1px rgba(56, 58, 66, 0.75);
+  -webkit-box-shadow: -1px 3px 9px 1px rgba(56, 58, 66, 0.75);
+  -moz-box-shadow: -1px 3px 9px 1px rgba(56, 58, 66, 0.75);
+
 }
 
 
@@ -43,8 +47,6 @@ body {
   background-color: var(--main-color);
   overflow: hidden;
   margin-left: 1.6em;
-
-
 
 }
 
@@ -64,7 +66,6 @@ body {
   width: 170px;
   height: 50px;
   background-color: var(--second-color);
-  color: red;
   margin: 10px;
   padding: -15px;
   border-radius: 1em;
@@ -74,16 +75,17 @@ body {
 
 }
 
-.home-title h3 {
+.home-title a {
 
   text-decoration: none;
-  color: var(--text-color) !important;
+  color: var(--text-color);
+  text-decoration: none;
 }
 
-.home-title h3:hover {
+.home-title a:hover {
 
   text-decoration: none;
-  color: rgb(0, 153, 255) !important;
+  color: rgb(0, 153, 255)  ;
 }
 
 .home-title:hover {
@@ -101,15 +103,16 @@ body {
   background-color: #000000;
   color: rgb(0, 153, 255);
   display: flex;
-  justify-content: center;
+  justify-content: start;
   align-items: center;
-  overflow: hidden;
+  white-space:normal;
   position: absolute;
   z-index: 1;
   transition: 0.6s;
   top: 0%;
   left: 100%;
   opacity: 0.9;
+
 }
 
 .card:hover .overlay-content {
@@ -137,11 +140,14 @@ ul {
 .nav a {
   background-color: var(--second-color) !important;
   color: var(--text-color) !important;
+  text-decoration: none;
+  margin: 1rem;
 }
 
 .nav a:hover {
   background-color: var(--second-color) !important;
   color: rgb(0, 153, 255) !important;
+  font-weight: bold;
 }
 
 /* ================================= */
@@ -156,7 +162,7 @@ ul {
 ::-webkit-scrollbar-track {
   background: var(--third-color);
   border-radius: 100vw;
-  margin-block: 0.5em;
+  margin-block:0.1em;
 }
 
 ::-webkit-scrollbar-thumb {
@@ -173,35 +179,55 @@ ul {
 
 /******* Footer ********/
 .footer {
+
   background-color: #2a2b39;
-  padding: 2.5em;
+  padding: 3rem 8rem 3rem 8rem;
   border-top: solid 0.15em var(--second-color);
 }
 
 .social-bar {
-  height: 1.2em;
-  width: 50em;
+  height:2.5rem;
+  width: 60%;
   background-color: #2a2b39;
-  padding: 2em;
-  transform: translateY(2.2em);
-  border-radius: 10em;
-  border: solid 0.15em var(--second-color);
+  transform: translateY(1.2rem);
+  border-radius: 5rem;
+  border: solid 0.1rem var(--second-color);
+  
+
 }
 
 
 .social-icons ul {
   display: flex;
-  transform: translateY(-2.6em);
+  justify-content: center;
+  align-items: center;
+  transform: translateY(-0.3rem);  
+  margin: 0;
+  padding: 0;
+
 }
 
+
 .social-icons a {
-  font-size: 3em;
+  font-size: 1.5rem;
   color: var(--fourth-color);
-  margin-left: 1.5em;
+  padding: 1rem;
+  
 }
 
 .list-menu {
   color: var(--fourth-color);
+
+}
+.list-menu a {
+  color: var(--fourth-color);
+  text-decoration: none;
+}
+.list-menu a:hover {
+  color: var(--fourth-color);
+  text-decoration: none;
+  font-weight: bold;
+  color:rgb(0, 153, 255)
 }
 
 .list-contact {
@@ -301,11 +327,11 @@ ul {
 }
 .infocard p {
   color: var(--text-color);
+
 }
 
 .infocard span {
-  color: #2a2b39;
-
+  color: var(--text-color);
 }
 
 .list-group-item {

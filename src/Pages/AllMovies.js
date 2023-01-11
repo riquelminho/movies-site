@@ -2,7 +2,9 @@
 import React, { useEffect, useState } from "react";
 
 import { Container, Row ,Col, } from "react-bootstrap";
+import Footer from "../Components/Footer";
 import MovieBox from "../Components/MovieBox";
+import Search from "../Components/Search";
 
 
 
@@ -22,7 +24,10 @@ const AllMovies = () => {
   }, []);
 
   return (
+    <>
+    <Search/>
     <Container fluid="md" className="bg-Pages">
+      
     <Row>
       {Array.from(movie).map((movieReq) =>
          <Col>
@@ -31,6 +36,8 @@ const AllMovies = () => {
           }  
     </Row>
     </Container>
+    <Footer/>
+    </>
 ); 
 }
 

@@ -3,6 +3,8 @@ import React, { useEffect, useState } from "react";
 import MovieBox from "../Components/MovieBox";
 import { Container, Row ,Col,  } from "react-bootstrap";
 import Pages from "../Components/Pagination";
+import Search from "../Components/Search";
+import Footer from "../Components/Footer";
 
 
   const TopRatedPage = ({ getPage, pageCount }) => {
@@ -20,7 +22,9 @@ import Pages from "../Components/Pagination";
   }, []);
 
   return (
-    <Container fluid="md" className="bg-Pages">
+    <>
+    <Search/>
+    <Container fluid="lg" className="bg-Pages">
     <Row>
       {Array.from(movie).map((movieReq) =>
          <Col>
@@ -28,8 +32,9 @@ import Pages from "../Components/Pagination";
          </Col>)
           }  
     </Row>
-    <Pages getPage={getPage} pageCount={pageCount}/>
     </Container>
+    <Footer/>
+    </>
   );
 };
 export default TopRatedPage;

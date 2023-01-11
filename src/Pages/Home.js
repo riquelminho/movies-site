@@ -8,6 +8,7 @@ import Search from "../Components/Search";
 
 
 
+
 const Home = () => {
   return (
     <main>

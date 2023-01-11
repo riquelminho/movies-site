@@ -1,6 +1,8 @@
 
 import React, { useEffect, useState } from "react";
 import { Col, Container, Row } from "react-bootstrap";
+import Footer from "../Components/Footer";
+import Search from "../Components/Search";
 import TvBox from "../Components/TvBox";
 
 
@@ -23,6 +25,8 @@ const TvShowPage = () => {
   }, []);
 
   return (
+    <>
+    <Search/>
     <Container fluid="md" className="bg-Pages">
     <Row>
       {Array.from(movie).map((movieReq) =>
@@ -32,6 +36,8 @@ const TvShowPage = () => {
           }  
     </Row>
     </Container>
+    <Footer/>
+    </>
   );
 };
 export default TvShowPage;

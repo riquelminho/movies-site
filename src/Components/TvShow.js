@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { Container, Nav} from 'react-bootstrap';
+import { Link } from "react-router-dom";
 import TvBox from "./TvBox";
 
 
@@ -19,7 +20,7 @@ const TvShow = () => {
   },[])
   return (
     <div>
-    <div className="home-title"><h3><Nav.Link href= "/TvShowPage">TV Show</Nav.Link></h3> </div>
+    <div className="home-title"><h3><Link to= "/TvShowPage">TV Show</Link></h3> </div>
     <Container fluid className="horizental-scroll">
       
       {Array.from(Tvshow).map((movieReq)=>

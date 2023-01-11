@@ -10,6 +10,7 @@ import axios from "axios";
 
 import { FaThumbsUp,FaThumbsDown } from 'react-icons/fa';
 import Search from "../Components/Search";
+import Footer from "../Components/Footer";
 
 const WatchingPage = () => {
   const params = useParams();
@@ -50,12 +51,12 @@ const WatchingPage = () => {
            <Col className='infocard'  >
         <Card style={{ width: '45rem' }}>
       <ListGroup variant="flush">
-      <ListGroup.Item> <p> <span > Title: &nbsp;</span>{movieInfo.title} </p> </ListGroup.Item>
-      <ListGroup.Item> <p> <span > Overview:&nbsp;</span>{movieInfo.overview} </p> </ListGroup.Item>
-      <ListGroup.Item> <p> <span > Runtime:&nbsp;</span> {movieInfo.runtime} min</p> </ListGroup.Item>
-      <ListGroup.Item> <p> <span > Release date:&nbsp;</span> {movieInfo.release_date}</p> </ListGroup.Item>
-      <ListGroup.Item> <p> <span > Rating:</span>&nbsp; {movieInfo.vote_average} </p> </ListGroup.Item>
-      <ListGroup.Item> <p> <span > Vote count: </span>&nbsp;{movieInfo.vote_count} </p> </ListGroup.Item>  
+      <ListGroup.Item> <p> <span > TITLE: &nbsp;</span>{movieInfo.title} </p> </ListGroup.Item>
+      <ListGroup.Item> <p> <span >  OVERVIEW:&nbsp;</span>{movieInfo.overview} </p> </ListGroup.Item>
+      <ListGroup.Item> <p> <span >  RUNTIME:&nbsp;</span> {movieInfo.runtime} min</p> </ListGroup.Item>
+      <ListGroup.Item> <p> <span >  RELASE DATE:&nbsp;</span> {movieInfo.release_date}</p> </ListGroup.Item>
+      <ListGroup.Item> <p> <span >  RATING:</span>&nbsp; {movieInfo.vote_average} </p> </ListGroup.Item>
+      <ListGroup.Item> <p> <span > VOTE COUNT: </span>&nbsp;{movieInfo.vote_count} </p> </ListGroup.Item>  
         <ListGroup.Item className='icons-card' ><h5><FaThumbsUp/> <FaThumbsDown/></h5> </ListGroup.Item>
       </ListGroup> 
     </Card>
@@ -63,6 +64,7 @@ const WatchingPage = () => {
           
         </Row>
       </Container>
+      <Footer/>
     </>
   );
 };
