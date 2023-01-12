@@ -24,7 +24,7 @@ body {
   border-radius: 100vw;
 }
 ::-webkit-scrollbar-thumb:hover {
-  background: rgb(0, 153, 255);
+  background: #0099FF;
 }
 
 /*============ Navbar search form  ====================*/
@@ -73,7 +73,7 @@ body {
   margin: 1rem;
 }
 .nav-links a:hover {
-  color: rgb(0, 153, 255);
+  color: #0099FF;
   font-weight: bold;
 }
 
@@ -91,7 +91,7 @@ body {
   -moz-box-shadow: -1px 3px 9px 1px rgba(56, 58, 66, 0.75);
 }
 
-/*============ MovieBox  ====================*/
+/*============ MovieBox & card  ====================*/
 .MovieBox {
   background: #474E68;
   padding: 1.5rem 1.5rem 1.5rem 0rem;
@@ -104,7 +104,7 @@ body {
   margin-left: 1.6em;
 }
 .MovieBox .card:hover {
-  border-color: rgb(0, 153, 255);
+  border-color: #0099FF;
 }
 .MovieBox .card img {
   border-radius: 1%;
@@ -112,6 +112,28 @@ body {
   height: 100%;
   -o-object-fit: cover;
      object-fit: cover;
+}
+
+.overlay-content {
+  width: 100%;
+  height: 100%;
+  background-color: #000000;
+  color: #0099FF;
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  white-space: normal;
+  position: absolute;
+  z-index: 1;
+  transition: 0.6s;
+  top: 0%;
+  left: 100%;
+  opacity: 0.9;
+}
+
+.card:hover .overlay-content {
+  /* left: 0; */
+  transform: translateX(-100%);
 }
 
 /*============ Home ====================*/
@@ -127,17 +149,139 @@ body {
   align-items: center;
 }
 .home-title:hover {
-  text-decoration: none;
-  color: rgb(0, 153, 255);
+  background-color: #404258;
+  border: 0.12em solid #6B728E;
+  border-radius: 1em;
 }
-
 .home-title a {
   text-decoration: none;
   color: #eef2ff;
   text-decoration: none;
 }
 .home-title a:hover {
+  text-decoration: none;
+  color: #0099FF;
+}
+
+ul {
+  list-style-type: none;
+}
+
+/*============ footer ====================*/
+.footer {
+  background-color: #2a2b39;
+  padding: 3rem 8rem 3rem 8rem;
+  border-top: solid 0.15em #474E68;
+}
+
+.social-bar {
+  height: 2.5rem;
+  width: 60%;
+  background-color: #2a2b39;
+  transform: translateY(1.2rem);
+  border-radius: 5rem;
+  border: solid 0.1rem #474E68;
+}
+
+.social-icons ul {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transform: translateY(-0.3rem);
+  margin: 0;
+  padding: 0;
+}
+.social-icons a {
+  font-size: 1.5rem;
+  color: #6B728E;
+  padding: 1rem;
+}
+
+.list-menu {
+  color: #6B728E;
+}
+.list-menu a {
+  color: #6B728E;
+  text-decoration: none;
+}
+.list-menu a:hover {
+  color: #6B728E;
+  text-decoration: none;
+  font-weight: bold;
+  color: #0099FF;
+}
+
+.list-contact {
+  color: #6B728E;
+}
+
+.newsletter {
+  color: #6B728E;
+}
+.newsletter Button {
+  color: white;
   background-color: #404258;
-  border: 0.12em solid #6B728E;
+  border-color: #6B728E;
+}
+.newsletter Button:hover {
+  color: #2a2b39;
+  background-color: #50577A;
+  border-color: #6B728E;
+}
+
+/*============ background of all pages ====================*/
+.bg-Pages {
+  background-color: var(--second-color);
+}
+
+/*============ contact pages ====================*/
+.contact-page {
+  background-color: #474E68;
+  color: #eef2ff;
+  width: 70%;
+  height: 80vh;
+  margin-top: 5em;
+  margin-bottom: 5em;
+  padding: 4em;
   border-radius: 1em;
+}
+.contact-page Button {
+  background-color: #2a2b39;
+  border-color: #6B728E;
+  justify-content: center;
+}
+.contact-page h4 {
+  border-color: #6B728E;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/*============ watching pages ====================*/
+.watching-Page {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 1em;
+}
+
+.infocard p {
+  color: #eef2ff;
+}
+.infocard p span {
+  color: #2a2b39;
+  font-weight: bold;
+}
+
+.list-group-item {
+  background-color: #474E68;
+}
+
+.icons-card {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #eef2ff;
+  font-size: 1.3em;
+  word-spacing: 1em;
 }/*# sourceMappingURL=index.css.map */
